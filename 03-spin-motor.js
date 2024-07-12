@@ -2,7 +2,7 @@ var five = require('johnny-five');
 var board = new five.Board();
 
 board.on('ready', function () {  
-    var motor = new five.Motor(10);
+    var motor = new five.Motor(9);
 
     motor.on("start", function() {
         board.wait(2000, function() {
