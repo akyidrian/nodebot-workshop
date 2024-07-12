@@ -21,7 +21,7 @@ board.on('ready', function () {
     var led = new five.Led(9);
     var sensor = new five.Sensor("A0");
 
-    sensor.on("data", function() {
+    sensor.on("change", function() {
         if(this.value > 600) { led.on(); }
         else { led.off(); }
     });
